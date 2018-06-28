@@ -12,7 +12,7 @@ class PrivacyVC: UIViewController {
     let textView = UITextView()
     override func viewDidLoad() {
         super.viewDidLoad()
-//        textView.isScrollEnabled = false
+        
         textView.text = "PrivacyPolicy_Text".local
         textView.isEditable = false
         textView.translatesAutoresizingMaskIntoConstraints = false
@@ -29,7 +29,8 @@ class PrivacyVC: UIViewController {
         textView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         textView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         
-//        textView.isScrollEnabled = true
+//        textView.isScrollEnabled = false //uncomment this line to fix bug
+        textView.isScrollEnabled = true
 
     }
     @objc func dismissNav(){
